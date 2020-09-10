@@ -1,0 +1,361 @@
+
+
+@import url('https://fonts.googleapis.com/css?family=Bree+Serif|Cardo|Raleway&display=swap');
+
+$mainColor: #5D8994;
+$secondColor: #FF8E59;
+$fontColor: rgb(90, 90, 90);
+
+$bodyFont: 'Cardo';
+$secondFont: 'Bree Serif';
+$H2Font: 'Raleway';
+
+
+//BODY & HTML:
+
+
+html {
+    min-height: 100%;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+*,
+*:before,
+*:after {
+    box-sizing: inherit;
+}
+
+body {
+    margin: 0%;
+    padding-bottom: 10%;
+    min-height: 100%;
+    max-width: 100%;
+    font-size: 1em;
+    color: black;
+    font-family: sans-serif;
+    background-color: white;
+}
+
+body:after {
+    content: "";
+    position: fixed;
+    min-height: 100%;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: -1;
+    background: url(../media/sidekix-media-zLT3VqWEgOQ-unsplash_fade_white_resize2.png) center center;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    background-size: cover;
+}
+
+.products-body:after {
+    background: white;
+}
+
+.hero-banner {
+    background: url(../media/featured_banner.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    filter: contrast(120%);
+}
+
+.banner-header {
+    text-align: center;
+    font-size: 1.6em;
+    position: relative;
+    padding: 12%;
+    color: white;
+    text-shadow: 10px 6px 18px #1d1d1d;
+}
+
+//HEADER:
+
+
+
+header {
+    margin: 0%;
+    position: relative;
+    width: 100%;
+    max-height: 200px;
+    padding: 10px;
+    background-color: $mainColor;
+}
+
+.header-logo {
+    width: 300px;
+    display: block;
+    padding: 10px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.icon-container {
+    position: absolute;
+    top: 50%;
+    right: 10%;
+}
+
+.icons {
+    width: 40px;
+    height: 40px;
+    margin-left: 5px;
+}
+
+//NAV: 
+
+
+
+nav {
+    display: flex;
+    justify-content: center;
+    overflow: hidden;
+    background-color: rgba(255, 255, 255, 0.7);
+    margin-bottom: 1%;
+}
+
+nav a {
+    font-family: $secondFont;
+    font-size: 1em;
+    color: $secondColor;
+    border-style: none;
+    text-decoration: none;
+    display: inline-block;
+    padding: 10px;
+    margin: auto;
+}
+
+nav a:hover {
+    text-decoration: underline;
+}
+
+.active {
+    text-decoration: underline;
+    font-weight: bold;
+}
+
+.products-body nav a {
+    padding-bottom: 0px;
+}
+
+
+//Page Content:
+
+
+
+.textContainer, .button_container {
+    float: left;
+    box-sizing: border-box;
+}
+
+.textContainer {
+    margin-left: 10%;
+    width: 30%;
+}
+
+p {
+    color: $fontColor;
+    font-family: $bodyFont;
+}
+
+h2 {
+    font-family: $H2Font;
+}
+
+h2:last-of-type {
+    border-bottom: 2px solid $secondColor;
+}
+
+li, h3 {
+    font-family: $secondFont;
+    color: $secondColor;
+}
+
+li {
+    list-style: none;
+    padding: 2%;
+    margin-left: 15%;
+}
+
+li:hover, h3:hover {
+    text-decoration: underline;
+}
+
+.product-categories {
+    margin-left: 15%;
+}
+
+.products-img {
+    width: 90%;
+}
+
+.clearfix:after {
+    content: "";
+    clear: both;
+    display: table;
+}
+
+.container {
+    float: left;
+    width: 20%;
+    display: table;
+    padding: 5px;
+}
+
+
+
+//BUTTON:
+
+
+
+.button_container {
+    position: relative;
+    display: block;
+    width: 60%;
+    margin: auto;
+}
+
+button {
+    text-align: center;
+    font-size: 1.7em;
+    color: white;
+    border: none;
+    background-color: $secondColor;
+    border: solid 3px white;
+    border-radius: 15px;
+    box-shadow: 5px 5px 18px #1d1d1d;
+    height: 100px;
+    width: 300px;
+    margin-left: 25%;
+    margin-top: 30%;
+}
+
+button:hover {
+        color: $secondColor;
+        background-color: white;
+}
+
+
+
+//MEDIA QUERIES:
+
+
+
+@media screen and (max-device-width: 900px) {
+    body:after {
+        position: fixed;
+        min-height: 100%;
+        top: 0;
+        left: 0;
+        right: 0;
+        background: url(../media/sidekix-media-zLT3VqWEgOQ-unsplash-mobile-resized.jpg) center center;
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        background-size: cover;
+    }
+
+    nav a {
+        font-size: 2em;
+    }
+
+}
+
+@media screen and (max-device-width: 812px), screen and (max-width: 812px) {
+
+    nav a {
+        background-color: none;
+    }
+
+    .pale-background {
+        background-color: rgba(255, 255, 255, 0.8);
+        padding-bottom: 1%;
+    }
+
+    .textContainer, .button_container {
+        float: none;
+    }
+
+    .textContainer {
+        display: block;
+        position: relative;
+        width: 90%;
+        margin: 5%;
+    }
+
+    ul {
+        margin-left: 5%;
+    }
+
+    li {
+        font-size: 1em;
+    }
+
+    .button_container {
+        position: relative;
+        display: block;
+        margin-left: 25%;
+        margin-right: 25%;
+    }
+
+    button {
+        margin-top: 5%;
+    }
+
+    .icon-container {
+        right: 5%;
+    }
+
+    .product-categories {
+        margin-left: 20%;
+    }
+
+    .container {
+        width: 40%;
+    }
+
+}
+
+@media screen and (max-width: 812px) {
+
+    button {
+        margin-left: auto;
+        margin-right: auto;
+    }
+    
+}
+
+@media screen and (max-device-width: 812px) {
+    .icon-container {
+        top: 30%;
+    }
+    
+    .icons {
+        width: 70px;
+        height: 70px;
+        margin-left: 25px;
+    }
+}
+
+@media screen and (max-device-width: 650px), sceen and (max-width: 650px) {
+
+    .button_container {
+        margin-left: 23%;
+    }
+
+}
+
+@media screen and (max-device-width: 570px), screen and (max-width: 570px) {
+
+    .button_container {
+        margin-left: 19%;
+    }
+
+    .icon-container {
+        right: 2%;
+    }
+
+}
